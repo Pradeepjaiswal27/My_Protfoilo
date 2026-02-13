@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pradeep Jaiswal | Java Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --text:#1e293b;
+    --card:#ffffff;
+}
+
+body.dark {
+    --light:#0f172a;
+    --text:#f8fafc;
+    --card:#1e293b;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--light);
+    color:var(--text);
+    transition:0.3s;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    width:100%;
+    background:var(--card);
+    padding:15px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    z-index:1000;
+}
+
+nav a{
+    text-decoration:none;
+    margin:0 10px;
+    color:var(--text);
+    font-weight:500;
+}
+
+.toggle{
+    cursor:pointer;
+    font-size:20px;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+}
+
+.hero h1{
+    font-size:48px;
+}
+
+.hero span{
+    color:var(--primary);
+}
+
+.hero p{
+    margin-top:15px;
+    max-width:600px;
+}
+
+.btn{
+    margin-top:20px;
+    padding:12px 25px;
+    background:var(--primary);
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* SECTIONS */
+section{
+    padding:80px 10%;
+}
+
+h2{
+    margin-bottom:30px;
+    text-align:center;
+    font-size:32px;
+}
+
+/* CARDS */
+.card{
+    background:var(--card);
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.skills span{
+    display:inline-block;
+    background:var(--primary);
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+    margin:5px;
+    font-size:14px;
+}
+
+/* PROJECT GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:var(--card);
+}
+
+/* ANIMATION */
+.fade{
+    opacity:0;
+    transform:translateY(30px);
+    transition:1s;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    nav{
+        padding:15px 5%;
+    }
+    section{
+        padding:60px 5%;
+    }
+    .hero h1{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div><strong>Pradeep Jaiswal</strong></div>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <span class="toggle" onclick="toggleTheme()">🌙</span>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Hello, I'm <span>Pradeep Jaiswal</span></h1>
+    <h3>Java Developer | Spring Boot | Microservices</h3>
+    <p>Building scalable backend systems with secure APIs, microservices architecture and performance optimization.</p>
+    <a href="My Resume (1).pdf" download class="btn">Download Resume</a>
+</div>
+
+<section id="about" class="fade">
+<h2>About Me</h2>
+<div class="card">
+Java Developer with 10 months of experience designing REST APIs,
+microservices, Spring Security (JWT/OAuth2), CI/CD, and database-driven applications.
+Focused on writing clean, maintainable and high-performance backend systems.
+</div>
+</section>
+
+<section id="skills" class="fade">
+<h2>Skills</h2>
+<div class="card skills">
+<span>Java</span>
+<span>Spring Boot</span>
+<span>Microservices</span>
+<span>Hibernate</span>
+<span>REST API</span>
+<span>SQL</span>
+<span>PL/SQL</span>
+<span>JUnit</span>
+<span>Maven</span>
+<span>AWS</span>
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>TypeScript</span>
+<span>GitHub</span>
+</div>
+</section>
+
+<section id="projects" class="fade">
+<h2>Projects</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Student Management System</h3>
+<p>Spring Boot, JPA, Thymeleaf, MySQL</p>
+<p>Full-stack CRUD system with REST APIs and responsive UI.</p>
+</div>
+
+<div class="card">
+<h3>Shopper Store</h3>
+<p>Java, JSP, Servlets, Oracle DB</p>
+<p>E-commerce app with login, cart, and product management.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="fade">
+<h2>Contact</h2>
+<div class="card">
+<p>Email: jaiswalpradeep966@gmail.com</p>
+<p>Phone: 8103632992</p>
+<p>LinkedIn: linkedin.com/in/pradeepjaiswal27</p>
+<p>GitHub: github.com/Pradeepjaiswal27</p>
+</div>
+</section>
+
+<footer>
+© 2026 Pradeep Jaiswal | Java Developer
+</footer>
+
+<script>
+function toggleTheme(){
+    document.body.classList.toggle("dark");
+}
+
+const faders = document.querySelectorAll(".fade");
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+faders.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
